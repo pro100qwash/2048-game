@@ -70,9 +70,10 @@ Buttons and labels for score, best score, game title, and Game Over overlay.
 
 Responsive design for both interaction styles (mouse + keyboard).
 
-🖼 Screenshot (Optional)
+🖼 Screenshot 
 
-(You can insert a screenshot of the game GUI here)
+![image](https://github.com/user-attachments/assets/b4a9f756-a51b-4735-8bee-15c392b8a6a3)
+
 
 
 👨‍💻 Author
