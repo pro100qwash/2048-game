@@ -1,80 +1,93 @@
-🎮 2048 Game in MATLAB
+# 🎮 2048 Game in MATLAB
 
-This is a complete recreation of the popular 2048 game built in MATLAB, featuring a fully functional GUI with mouse and keyboard controls.
+This is a complete implementation of the classic [2048 game](https://play2048.co/) built entirely in **MATLAB**.  
 
-🧩 Features
+---
 
-Playable 2048 game with a graphical interface.
+## 🧩 Features
 
-Fully supports both keyboard arrow keys and on-screen buttons.
+- 🟦 4×4 dynamic grid built with `uicontrol`
+- 🎨 Colored tiles and adaptive font sizes
+- ⌨️ Keyboard arrow key support (↑ ↓ ← →)
+- 🖱 GUI buttons for directional control
+- 💾 Persistent **Best Score** saved in `best.mat`
+- 🛑 Game over detection and overlay message
+- 🔄 "New Game" button for easy restart
 
-Tracks score and best score, saved between sessions (best.mat).
+---
 
-Implements core 2048 logic including tile merging, random tile generation, and game over detection.
+## 🚀 How to Run
 
-Customizable tile colors and font sizes based on the tile values.
-
-🚀 How to Run
-
-Open MATLAB.
-
-Place the game2048.m file in your working directory.
-
-Run the file:
-
-game2048
-
-Requires no additional toolboxes.
+1. Open **MATLAB**.
+2. Place the `game2048.m` file in your current working directory.
+3. Run the following in the Command Window:
+   ```matlab
+   game2048
 
 🎮 Controls
+You can use either keyboard or GUI buttons for gameplay.
 
-Arrow keys: Move tiles (↑ ↓ ← →).
+| Input               | Action                 |
+| ------------------- | ---------------------- |
+| ↑ (Up Arrow)        | Move tiles up          |
+| ↓ (Down Arrow)      | Move tiles down        |
+| ← (Left Arrow)      | Move tiles left        |
+| → (Right Arrow)     | Move tiles right       |
+| `New Game` button   | Restart the game       |
+| On-screen `▲ ▼ ◀ ▶` | Alternate GUI controls |
 
-On-screen buttons: Also available for up, down, left, and right movement.
+Both keyboard and button inputs trigger the same internal logic.
 
-New Game button: Resets the game board and score.
+📂 Files Included
 
-When no moves are left, a Game Over screen is displayed with an option to restart.
+| File                     | Description                                   |
+| ------------------------ | --------------------------------------------- |
+| `game2048.m`             | Main source code (GUI + game logic)           |
+| `best.mat`               | Auto-created on first run to store best score |
+| *(optional)* `README.md` | Project description (this file)               |
 
-📦 Files
+🧠 Code Structure Overview
+🗂 Main Logic (Nested Functions inside game2048.m)
 
-game2048.m: The full source code of the game, including GUI and logic.
+| Function                                      | Description                                          |
+| --------------------------------------------- | ---------------------------------------------------- |
+| `moveevent`                                   | Handles tile shifting and merging logic (row-wise)   |
+| `createNewNum`                                | Randomly inserts a new 2 or 4 into an empty tile     |
+| `judge`                                       | Checks if any moves are possible; triggers game over |
+| `drawSquare`                                  | Updates tile colors, text, and scores                |
+| `gameOver`                                    | Displays "Game Over" UI overlay                      |
+| `restart`                                     | Clears and resets the board                          |
+| `init`                                        | Initializes all UI components and game state         |
+| `key`                                         | Keyboard key binding logic (arrow keys)              |
+| `upmove`, `downmove`, `leftmove`, `rightmove` | Button control callbacks                             |
 
-best.mat: A file that stores the highest score achieved across game sessions (auto-generated on first run).
+🧱 GUI Elements
 
-🛠 Code Structure
+All elements are created using uicontrol programmatically:
 
-Main Game Function: game2048 initializes the UI and contains all nested logic functions.
+Grid: 16 editable fields (4×4)
 
-Subfunctions:
+Score & Best: Static text labels
 
-moveevent: Handles the merging and shifting of tiles.
+Directional Buttons: Buttons with Unicode arrows
 
-createNewNum: Randomly generates a new tile (2 or 4).
+Game Over Overlay: Hidden label + restart button
 
-drawSquare: Updates UI elements (tile values, colors, fonts).
+Restart Button: "New Game" in bottom-right
 
-judge: Checks for game over conditions.
+💾 Best Score Persistence
 
-gameOver: Triggers the end-game UI.
+Automatically saved in a file named best.mat.
 
-restart: Resets the game state.
+Updates after each game session or restart.
 
-init: Initializes the GUI components.
+Reloaded on every launch to retain progress.
 
-📐 Visual Layout
-
-4×4 grid using uicontrol elements (edit fields).
-
-Buttons and labels for score, best score, game title, and Game Over overlay.
-
-Responsive design for both interaction styles (mouse + keyboard).
-
-🖼 Screenshot 
-
+🖼 Screenshot (Optional)
 ![image](https://github.com/user-attachments/assets/b4a9f756-a51b-4735-8bee-15c392b8a6a3)
 
-
+📄 License
+This project is open-source and available for any use. No license restrictions apply.
 
 👨‍💻 Author
 
