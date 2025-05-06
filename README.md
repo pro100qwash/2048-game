@@ -44,7 +44,7 @@ Both keyboard and button inputs trigger the same internal logic.
 | ------------------------ | --------------------------------------------- |
 | `game2048.m`             | Main source code (GUI + game logic)           |
 | `best.mat`               | Auto-created on first run to store best score |
-| *(optional)* `README.md` | Project description (this file)               |
+| `README.md`              | Project description (this file)               |
 
 🧠 Code Structure Overview
 🗂 Main Logic (Nested Functions inside game2048.m)
@@ -83,7 +83,8 @@ Updates after each game session or restart.
 
 Reloaded on every launch to retain progress.
 
-🖼 Screenshot (Optional)
+🖼 Screenshot 
+
 ![image](https://github.com/user-attachments/assets/b4a9f756-a51b-4735-8bee-15c392b8a6a3)
 
 📄 License
