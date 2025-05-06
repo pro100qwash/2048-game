@@ -88,6 +88,7 @@ Reloaded on every launch to retain progress.
 ![image](https://github.com/user-attachments/assets/b4a9f756-a51b-4735-8bee-15c392b8a6a3)
 
 📄 License
+
 This project is licensed under the MIT License. Feel free to use, modify, and distribute.
 
 👨‍💻 Author
