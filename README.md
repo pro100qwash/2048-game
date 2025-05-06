@@ -77,5 +77,6 @@ Responsive design for both interaction styles (mouse + keyboard).
 
 
 👨‍💻 Author
+
 Developed by Ivan Efimov
 
